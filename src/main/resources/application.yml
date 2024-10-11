@@ -1,0 +1,23 @@
+server:
+  port: 8081
+logging:
+  level:
+    root: INFO
+    Linktic.Test.AuthService: DEBUG
+    org.springframework.security: DEBUG
+  file:
+    name: logs/application.log
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth
+    username: pruebapsqluser
+    password: test
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+jwt:
+  secret: /eNjZ33uOWV5BeX0oEHTlU3gR5O8dCDgslDASXC2wME=
+  expiration: 86400000
