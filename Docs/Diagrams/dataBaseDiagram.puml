@@ -1,0 +1,9 @@
+@startuml
+entity "User" as user {
+    * id : Long <<PK>>
+    --
+    username : String
+    password : String
+    role : String
+}
+@enduml

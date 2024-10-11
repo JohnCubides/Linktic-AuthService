@@ -1,0 +1,28 @@
+@startuml
+package "API" {
+    [AuthController]
+}
+
+package "Application" {
+    [AuthService]
+}
+
+package "Core" {
+    [User] --> [UserRepository]
+    [UserRequestDTO]
+}
+
+package "Infrastructura" {
+    [JwtAuthenticationFilter]
+}
+
+package "Configuration" {
+    [SecurityConfig]
+    [SwaggerConfig]
+}
+
+[AuthController] --> [AuthService] : calls
+[AuthService] --> [UserRepository] : uses
+[JwtAuthenticationFilter] --> [UserDetailsService] : calls
+[JwtAuthenticationFilter] --> [SecurityConfig] : registered in
+@enduml

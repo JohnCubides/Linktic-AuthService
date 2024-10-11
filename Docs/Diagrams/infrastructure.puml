@@ -1,0 +1,54 @@
+@startuml
+
+' Configuración de parámetros visuales
+skinparam shadowing true
+skinparam rectangle {
+    BackgroundColor white
+    BorderColor black
+    RoundCorner 15
+}
+skinparam component {
+    BackgroundColor<<AuthS>> #A9DFBF
+    BorderColor black
+}
+
+' Definimos que el flujo será de arriba a abajo
+top to bottom direction
+
+' Capa de Frontend
+package "Frontend Layer" {
+    frame "Frontend\n(SvelteKit)" as FE
+}
+
+' Capa de API Gateway y Serverless
+package "API Gateway & Serverless Layer" {
+    node "API Gateway\n(Spring Cloud Gateway)" as APIGW
+    queue "Real-time Updates\n(WebSocket)" as SF
+}
+
+' Capa de Microservicios
+package "Backend Services Layer" {
+    component "Product Catalog Service\n(Java - Spring Boot)" as PCS
+    component "Order Management Service\n(.NET - ASP.NET Core)" as OMS
+    component "Auth Service\n(Java - Spring Boot)" as AuthS <<AuthS>>
+}
+
+' Capa de Base de Datos
+package "Database Layer" {
+    database "PostgreSQL Database" as DB
+}
+
+' Conexiones entre componentes
+FE --> APIGW : API Requests
+APIGW --> PCS : /products/*
+APIGW --> OMS : /orders/*
+APIGW --> AuthS : /auth/*
+
+PCS --> DB : Read/Write Products
+OMS --> DB : Read/Write Orders
+AuthS --> DB : Read/Write Users
+
+OMS --> SF : Trigger Real-time Updates
+FE <-- SF : Real-time Updates
+
+@enduml

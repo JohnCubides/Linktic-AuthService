@@ -1491,3 +1491,37 @@ java.lang.IllegalArgumentException: ROLE_ADMIN cannot start with ROLE_ (it is au
 2024-10-11T05:41:54.397-05:00  INFO 7800 --- [AuthService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-11T05:41:54.401-05:00  INFO 7800 --- [AuthService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-10-11T05:41:54.408-05:00  INFO 7800 --- [AuthService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-11T05:42:00.354-05:00  INFO 17556 --- [AuthService] [main] L.T.AuthService.AuthServiceApplication   : Starting AuthServiceApplication using Java 23 with PID 17556 (C:\Users\USUARIO\source\repos\JohnCubides\linktic\AuthService\target\classes started by USUARIO in C:\Users\USUARIO\source\repos\JohnCubides\linktic\AuthService)
+2024-10-11T05:42:00.359-05:00 DEBUG 17556 --- [AuthService] [main] L.T.AuthService.AuthServiceApplication   : Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-11T05:42:00.374-05:00  INFO 17556 --- [AuthService] [main] L.T.AuthService.AuthServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T05:42:01.822-05:00  INFO 17556 --- [AuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T05:42:01.899-05:00  INFO 17556 --- [AuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interface.
+2024-10-11T05:42:02.770-05:00  INFO 17556 --- [AuthService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-10-11T05:42:02.788-05:00  INFO 17556 --- [AuthService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T05:42:02.788-05:00  INFO 17556 --- [AuthService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T05:42:02.887-05:00  INFO 17556 --- [AuthService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T05:42:02.887-05:00  INFO 17556 --- [AuthService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2389 ms
+2024-10-11T05:42:03.184-05:00  INFO 17556 --- [AuthService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T05:42:03.279-05:00  INFO 17556 --- [AuthService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11T05:42:03.337-05:00  INFO 17556 --- [AuthService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T05:42:03.765-05:00  INFO 17556 --- [AuthService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T05:42:03.814-05:00  INFO 17556 --- [AuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-11T05:42:04.086-05:00  INFO 17556 --- [AuthService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c5c20ed
+2024-10-11T05:42:04.093-05:00  INFO 17556 --- [AuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-11T05:42:04.131-05:00  WARN 17556 --- [AuthService] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-11T05:42:05.239-05:00  INFO 17556 --- [AuthService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T05:42:05.295-05:00  INFO 17556 --- [AuthService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T05:42:05.914-05:00 DEBUG 17556 --- [AuthService] [main] L.T.A.I.JwtAuthenticationFilter          : Filter 'jwtAuthenticationFilter' configured for use
+2024-10-11T05:42:06.183-05:00  WARN 17556 --- [AuthService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T05:42:06.215-05:00  INFO 17556 --- [AuthService] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2024-10-11T05:42:06.632-05:00 DEBUG 17556 --- [AuthService] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-10-11T05:42:07.146-05:00  INFO 17556 --- [AuthService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-10-11T05:42:07.165-05:00  INFO 17556 --- [AuthService] [main] L.T.AuthService.AuthServiceApplication   : Started AuthServiceApplication in 7.77 seconds (process running for 8.477)
+2024-10-11T05:42:12.761-05:00  INFO 17556 --- [AuthService] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T05:42:12.762-05:00  INFO 17556 --- [AuthService] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T05:42:12.763-05:00  INFO 17556 --- [AuthService] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-11T05:42:12.796-05:00 DEBUG 17556 --- [AuthService] [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/register
+2024-10-11T05:42:12.920-05:00 DEBUG 17556 --- [AuthService] [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/register
+2024-10-11T06:08:16.695-05:00  INFO 17556 --- [AuthService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T06:08:16.700-05:00  INFO 17556 --- [AuthService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T06:08:16.707-05:00  INFO 17556 --- [AuthService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
